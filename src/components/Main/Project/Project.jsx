@@ -7,7 +7,6 @@ const Projects = ({ t }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
-
   useEffect(() => {
       if (selectedProject) {
         document.documentElement.style.overflow = 'hidden'; 
@@ -18,7 +17,6 @@ const Projects = ({ t }) => {
         document.documentElement.style.overflow = 'unset';
       };
     }, [selectedProject]);
-
 
 
   return (
