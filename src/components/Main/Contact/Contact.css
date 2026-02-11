@@ -1,0 +1,143 @@
+/* --- CONTAINER PRINCIPAL --- */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px 20px;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+/* --- GRID DE CONTATO --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas no Desktop */
+  gap: 50px;
+  text-align: left;
+}
+
+/* --- LADO DO TEXTO E CARDS SOCIAIS --- */
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+
+.social-icons {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanhos iguais (1fr cada) */
+  grid-template-rows: repeat(2, auto); /* Cria 2 linhas que se ajustam ao conteúdo */
+  flex-wrap: wrap;
+  gap: 15px; /* Espaço entre as colunas e linhas */
+  margin-top: 30px;
+  max-width: 400px; /* Opcional: limita a largura total do grid para não esticar demais */
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 20px;
+  /* background: rgba(255, 255, 255, 0.08); */
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  /* border-radius: 12px; */
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+
+
+/* --- LADO DO FORMULÁRIO (DESKTOP) --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  outline: none;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: #007bff;
+}
+
+.btn-send {
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-send:hover {
+  background-color: #0056b3;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    width: 70%; 
+    max-width: 400px; 
+    margin: 30px auto 0; 
+    justify-content: center;
+  }
+
+  .social-card {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    min-width: unset;
+  }
+
+  .social-card svg {
+    font-size: 1.5rem;
+  }
+}

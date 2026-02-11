@@ -1,0 +1,115 @@
+/* 1. PARENT CONTAINER (Hero Content) */
+.hero-content {
+  text-align: center;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  animation: fadeInUp 1.2s ease forwards; 
+}
+
+/* 2. INTRODUCTION TEXT (Above H1) */
+.intro-text {
+  font-size: 1.1rem;
+  color: #8833ff;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* 3. MAIN TITLE (Name) */
+.hero-content h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem); /* Responsive font size */
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #8833ff;
+}
+
+/* 4. PROFESSIONAL ROLE (Role Title) */
+.role-container {
+  display: flex;            /* Ativa o flexbox */
+  justify-content: center;   /* Centraliza o conteúdo horizontalmente */
+  width: 100%;               /* Garante que o container ocupe a largura toda */
+  margin-bottom: 8px;
+}
+
+.role-title {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-weight: 300;
+  border-left: 3px solid #8833ff;
+  padding-left: 15px;
+  display: inline-block;
+  
+
+  overflow: hidden;           
+  white-space: nowrap;     
+  width: 0;                 
+  animation: typing 2s steps(40, end) forwards;     
+  animation-delay: 0.5s;
+}
+
+/* 5. TECHNOLOGY GROUP (Icons) */
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 40px;       
+  margin: 40px 0;
+}
+
+.tech-icons i {
+  font-size: 2rem; 
+  color: rgba(255, 255, 255, 0.7); 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+  animation: fadeInIcons 0.8s ease backwards;
+}
+
+/* Hover effect */
+.tech-icons i:hover {
+  color: #ffffff; 
+  transform: scale(1.2) translateY(-15px); 
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 40px rgba(136, 51, 255, 0.3)); /* Touch of purple highlight */
+}
+
+/* 6. ANIMATIONS (Keyframes) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInIcons {
+  from { 
+    opacity: 0; 
+    transform: scale(0.5); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes typing {
+  from { 
+    width: 0; 
+  }
+  to { 
+    width: 100%;
+    max-width: max-content; 
+  }
+}

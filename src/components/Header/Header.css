@@ -1,0 +1,198 @@
+/* Container principal com efeito de vidro refinado */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 1000;
+  box-sizing: border-box;
+  
+  /* Glassmorphism sutil */
+  background: rgba(13, 17, 23, 0.6); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Suporte para Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Estilização da Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+/* Menu de Navegação */
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 40px; /* Espaço generoso entre os links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7); /* Branco levemente transparente */
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Linha minimalista que aparece no hover */
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: #8833ff; /* Sua cor destaque */
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Container do Botão de Idioma */
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.lang-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda muito fina */
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px; /* Estilo pílula */
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.lang-button:hover {
+  background: white;
+  color: #0d1117;
+  border-color: white;
+  transform: translateY(-1px);
+}
+
+.lang-button:active {
+  transform: translateY(0);
+}
+
+
+/* RESPONSIVIDADE (Mobile) */
+/* --- RESPONSIVIDADE (Lógica de Visibilidade) --- */
+
+/* No Desktop: Esconde o que é mobile */
+.mobile-only {
+  display: none; 
+}
+
+/* No Desktop: Garante que o botão original apareça */
+.desktop-only {
+  display: flex;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 10px;
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* --- MOBILE QUERY (max-width: 768px) --- */
+@media (max-width: 768px) {
+  
+  /* REMOVEMOS o !important daqui e usamos seletores específicos */
+  .desktop-only { 
+    display: none !important; 
+  }
+
+  .mobile-only { 
+    display: block !important; /* Agora o botão dentro do menu aparece */
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(13, 17, 23, 0.98); 
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  /* Ajuste na lista para o botão não ficar esmagado */
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  /* Estilização específica do botão de idioma no MOBILE */
+  .nav-menu .lang-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: 1px solid #8833ff;
+    color: #8833ff;
+    background: transparent;
+    display: inline-block; /* Garante que respeite o padding */
+  }
+
+  /* Animação do X */
+  .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+  .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}

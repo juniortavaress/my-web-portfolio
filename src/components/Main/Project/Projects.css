@@ -1,0 +1,237 @@
+/* --- 1. Main Section Container --- */
+.projects-section {
+  padding: 100px 5%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* --- 2. Inner Content Wrapper --- */
+.project-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- 4. Filter Controls --- */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-container button {
+  background: transparent;
+  border: 1px solid rgba(136, 51, 255, 0.3);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-container button.active, 
+.filter-container button:hover {
+  background: #8833ff;
+  border-color: #8833ff;
+}
+
+/* --- 5. Projects Grid --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* --- 6. Project Card --- */
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  padding: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #8833ff;
+}
+
+
+/* Card Image Placeholder */
+.project-image-placeholder {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+/* Card Body Content */
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tools/Tags List */
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.project-tools span {
+  font-size: 0.75rem;
+  background: rgba(136, 51, 255, 0.15);
+  color: #a366ff;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* --- 7. Modal (Pop-up) --- */
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.project-modal-content {
+  background: #0d1117;
+  width: 95%;
+  max-width: 1000px; /* Aumentamos a largura para caber os dois lados */
+  border-radius: 20px;
+  border: 1px solid rgba(136, 51, 255, 0.3);
+  overflow: hidden;
+  position: relative;
+  animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  display: flex; 
+  flex-direction: row; 
+  align-items: stretch; /* Garante que os dois lados tenham a mesma altura */
+  max-height: 85vh; /* Evita que o modal saia da tela verticalmente */
+}
+
+/* Modal Close Button */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;     
+  justify-content: center;     
+  box-shadow: none;
+  z-index: 10;
+}
+
+.close-modal:hover {
+  outline: none;
+  box-shadow: none;
+  color: #8833ff;
+  transform: scale(1.40);
+}
+
+.close-modal:active {
+  outline: none;
+  color: #a366ff;
+  transform: scale(1.8);
+}
+
+.modal-image {
+  flex: 1; 
+  min-width: 40%; 
+  height: auto; 
+  min-height: 400px;
+}
+
+.modal-info {
+  flex: 1.2; 
+  padding: 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.modal-info h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.modal-full-desc {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+/* --- 8. Animations & Media Queries --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .modal-image { height: 200px; }
+  .modal-info { padding: 20px; }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .project-modal-content {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+  animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex; 
+  flex-direction: column; 
+  padding: 10px;
+  } 
+  
+  .modal-image {
+    width: 100%;
+    min-height: 0px
+  }
+
+  .modal-info {
+    padding: 30px;
+  }
+
+
+}

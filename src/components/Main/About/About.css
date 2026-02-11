@@ -1,0 +1,107 @@
+/* 1. CONTAINER & CONTENT */
+.about-container {
+  padding: 80px 20px;
+}
+
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 2. SECTION TITLE */
+.section-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 40px;
+  border-left: 5px solid #8833ff;
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* 3. GRID LAYOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* 4. TEXT & TAGS */
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.skills-tags span {
+  background: rgba(136, 51, 255, 0.1);
+  border: 1px solid rgba(136, 51, 255, 0.3);
+  color: #a366ff;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 5. SKILL CARDS (Right Side) */
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  color: #8833ff;
+}
+
+.skill-card span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.skill-card:hover {
+  transform: translateX(10px);
+  background: rgba(136, 51, 255, 0.05);
+  border-color: #8833ff;
+}
+
+/* 6. RESPONSIVENESS */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-cards {
+    display: none;
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; */
+  }
+
+  .skill-card {
+    flex: 1 1 200px;
+  }
+}
