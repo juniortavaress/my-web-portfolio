@@ -26,7 +26,7 @@ const Projects = ({ t }) => {
       <div className="project-content">
         <h2 className="section-title">{t('projects_title')}</h2>
 
-        <div className="filter-container">
+        <div className="filter-container desktop-only">
           {['all', 'web', 'software'].map((cat) => (
             <button 
               key={cat}
