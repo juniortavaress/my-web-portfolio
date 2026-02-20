@@ -30,6 +30,4 @@ export const projects = [
     tools: ['Python', 'PySide6', 'Matplotlib', 'NumPy'],
     color: '#8833ff'
   },
-
-
 ];

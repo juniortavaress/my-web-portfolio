@@ -68,7 +68,6 @@ const Projects = ({ t }) => {
           <div className="project-modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-modal" onClick={() => setSelectedProject(null)}>&times;</button>
             
-            
             <div className="modal-image">
                 {selectedProject.image ? (
                   <img 
