@@ -1,4 +1,3 @@
-/* Container principal com efeito de vidro refinado */
 .header {
   position: fixed;
   top: 0;
@@ -11,15 +10,12 @@
   padding: 0 5%;
   z-index: 1000;
   box-sizing: border-box;
-  
-  /* Glassmorphism sutil */
   background: rgba(13, 17, 23, 0.6); 
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Suporte para Safari */
+  -webkit-backdrop-filter: blur(12px); 
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Estilização da Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -30,18 +26,18 @@
   transform: scale(1.02);
 }
 
-/* Menu de Navegação */
+
 .nav-menu ul {
   display: flex;
   list-style: none;
-  gap: 40px; /* Espaço generoso entre os links */
+  gap: 40px; 
   margin: 0;
   padding: 0;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.7); /* Branco levemente transparente */
+  color: rgba(255, 255, 255, 0.7); 
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -50,7 +46,6 @@
   position: relative;
 }
 
-/* Linha minimalista que aparece no hover */
 .nav-menu a::after {
   content: '';
   position: absolute;
@@ -58,7 +53,7 @@
   height: 1px;
   bottom: -5px;
   left: 0;
-  background-color: #8833ff; /* Sua cor destaque */
+  background-color: #8833ff; 
   transition: width 0.3s ease;
 }
 
@@ -70,7 +65,6 @@
   width: 100%;
 }
 
-/* Container do Botão de Idioma */
 .header-actions {
   display: flex;
   align-items: center;
@@ -78,7 +72,7 @@
 
 .lang-button {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda muito fina */
+  border: 1px solid rgba(255, 255, 255, 0.2); 
   color: white;
   padding: 6px 14px;
   border-radius: 20px; /* Estilo pílula */
@@ -101,16 +95,10 @@
   transform: translateY(0);
 }
 
-
-/* RESPONSIVIDADE (Mobile) */
-/* --- RESPONSIVIDADE (Lógica de Visibilidade) --- */
-
-/* No Desktop: Esconde o que é mobile */
 .mobile-only {
   display: none; 
 }
 
-/* No Desktop: Garante que o botão original apareça */
 .desktop-only {
   display: flex;
 }
@@ -133,16 +121,13 @@
   transition: 0.4s;
 }
 
-/* --- MOBILE QUERY (max-width: 768px) --- */
 @media (max-width: 768px) {
-  
-  /* REMOVEMOS o !important daqui e usamos seletores específicos */
   .desktop-only { 
     display: none !important; 
   }
 
   .mobile-only { 
-    display: block !important; /* Agora o botão dentro do menu aparece */
+    display: block !important; 
   }
 
   .menu-toggle {
@@ -167,7 +152,6 @@
     right: 0;
   }
 
-  /* Ajuste na lista para o botão não ficar esmagado */
   .nav-menu ul {
     flex-direction: column;
     align-items: center;
@@ -180,7 +164,6 @@
     font-weight: 300;
   }
 
-  /* Estilização específica do botão de idioma no MOBILE */
   .nav-menu .lang-button {
     margin-top: 20px;
     padding: 12px 30px;
@@ -188,10 +171,9 @@
     border: 1px solid #8833ff;
     color: #8833ff;
     background: transparent;
-    display: inline-block; /* Garante que respeite o padding */
+    display: inline-block; 
   }
 
-  /* Animação do X */
   .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
   .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
   .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }

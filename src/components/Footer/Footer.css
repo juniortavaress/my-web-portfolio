@@ -52,7 +52,6 @@
   letter-spacing: 1px;
 }
 
-
 @media (max-width: 768px) {
   .footer-signature {
     flex-direction: column;

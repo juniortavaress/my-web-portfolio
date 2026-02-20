@@ -1,4 +1,3 @@
-/* --- CONTAINER PRINCIPAL --- */
 .contact-section {
   display: flex;
   justify-content: center;
@@ -19,29 +18,26 @@
   font-size: 2.5rem;
 }
 
-/* --- GRID DE CONTATO --- */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 colunas no Desktop */
+  grid-template-columns: 1fr 1fr; 
   gap: 50px;
   text-align: left;
 }
 
-/* --- LADO DO TEXTO E CARDS SOCIAIS --- */
 .contact-info h3 {
   margin-bottom: 15px;
   color: #007bff;
 }
 
-
 .social-icons {
   display: grid; 
-  grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanhos iguais (1fr cada) */
-  grid-template-rows: repeat(2, auto); /* Cria 2 linhas que se ajustam ao conteúdo */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, auto); 
   flex-wrap: wrap;
-  gap: 15px; /* Espaço entre as colunas e linhas */
+  gap: 15px;
   margin-top: 30px;
-  max-width: 400px; /* Opcional: limita a largura total do grid para não esticar demais */
+  max-width: 400px; 
 }
 
 .social-card {
@@ -50,9 +46,6 @@
   justify-content: center;
   gap: 12px;
   padding: 12px 20px;
-  /* background: rgba(255, 255, 255, 0.08); */
-  /* border: 1px solid rgba(255, 255, 255, 0.1); */
-  /* border-radius: 12px; */
   text-decoration: none;
   color: inherit;
   font-size: 1.1rem;
@@ -60,9 +53,6 @@
   min-width: 140px;
 }
 
-
-
-/* --- LADO DO FORMULÁRIO (DESKTOP) --- */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -101,7 +91,6 @@
   background-color: #0056b3;
 }
 
-/* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 768px) {
   .desktop-only {
     display: none;
