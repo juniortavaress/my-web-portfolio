@@ -1,10 +1,13 @@
+import fineInvestGraphImg from '../../../assets/fineinvest_graph_img.png';
+
 export const projects = [
   {
     id: 4,
     category: 'web', 
     key: 'finance_manager',
     tools: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
-    color: '#22c55e' 
+    color: '#22c55e',
+    image: fineInvestGraphImg
   },
   {
     id: 3,

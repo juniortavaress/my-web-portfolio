@@ -39,8 +39,16 @@ const Projects = ({ t }) => {
         <div className="projects-grid">
           {filteredProjects.map((proj) => (
             <div key={proj.id} className="project-card" onClick={() => setSelectedProject(proj)}>
-              <div className="project-image-placeholder" style={{ backgroundColor: proj.color }}>
-                <span>{t('status')}</span>
+              <div className="project-image-placeholder">
+                {proj.image ? (
+                  <img 
+                    src={proj.image} 
+                    alt={t(`project_list.${proj.key}.title`)} 
+                    className="project-img"
+                  />
+                ) : (
+                  <span>{t('status')}</span>
+                )}
               </div>
               <div className="card-body">
                 <h3>{t(`project_list.${proj.key}.title`)}</h3>
@@ -60,8 +68,19 @@ const Projects = ({ t }) => {
           <div className="project-modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-modal" onClick={() => setSelectedProject(null)}>&times;</button>
             
-            <div className="modal-image" style={{ backgroundColor: selectedProject.color }}></div>
             
+            <div className="modal-image">
+                {selectedProject.image ? (
+                  <img 
+                    src={selectedProject.image} 
+                    alt={t(`project_list.${selectedProject.key}.title`)} 
+                    className="project-img"
+                  />
+                ) : (
+                  <span>{t('status')}</span>
+                )}
+            </div>
+
             <div className="modal-info">
               <h2>{t(`project_list.${selectedProject.key}.title`)}</h2>
               <div className="project-tools">
