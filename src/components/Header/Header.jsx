@@ -9,7 +9,9 @@ const Header = ({ t, i18n, toggleLanguage }) => {
   return (
     <header className="header">
       <div className="logo">
-        <img src={logoImg} alt="Logo Jucelio" style={{ height: '80px' }} />
+        <a href="#home">
+          <img src={logoImg} alt="Logo Jucelio" style={{ height: '80px' }} />
+        </a>
       </div>
 
       {/* Only Mobile */}

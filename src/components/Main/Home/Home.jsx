@@ -21,6 +21,7 @@ const Home = ({ t }) => {
                     <i className="devicon-javascript-plain" title="JavaScript"></i>
                     <i className="devicon-html5-plain" title="HTML5"></i>
                     <i className="devicon-css3-plain" title="CSS3"></i>
+                    <i className="devicon-tailwindcss-original" title="Tailwind"></i>
                     <i className="devicon-git-plain" title="Git"></i>
                 </div>
             </div>

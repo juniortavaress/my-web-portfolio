@@ -1,4 +1,3 @@
-// src/components/ParticleBackground.jsx
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -14,13 +13,13 @@ const ParticleBackground = () => {
 
     const options = {
     background: {
-      color: { value: "#0d1117" }, // Cor de fundo (estilo GitHub Dark)
+      color: { value: "#0d1117" }, 
     },
     fpsLimit: 120,
     interactivity: {
       events: {
-        onClick: { enable: true, mode: "push" }, // Adiciona partículas ao clicar
-        onHover: { enable: true, mode: "grab" },  // Cria o elo com o mouse
+        onClick: { enable: true, mode: "push" }, 
+        onHover: { enable: true, mode: "grab" },  
       },
       modes: {
         grab: { distance: 140, links: { opacity: 1 } },
@@ -28,7 +27,7 @@ const ParticleBackground = () => {
       },
     },
     particles: {
-      color: { value: "#8833ff" }, // Cor das bolinhas (roxo da imagem)
+      color: { value: "#8833ff" }, 
       links: {
         color: "#8833ff",
         distance: 150,
@@ -51,7 +50,7 @@ const ParticleBackground = () => {
     },
   };
 
-  if (!init) return null; // Se não iniciou, não retorna nada (evita erro)
+  if (!init) return null; 
 
   return (
 <div style={{ 
