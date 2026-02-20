@@ -86,6 +86,16 @@ const Projects = ({ t }) => {
                 {selectedProject.tools.map(tool => <span key={tool}>{tool}</span>)}
               </div>
               <p className="modal-full-desc">{t(`project_list.${selectedProject.key}.full`)}</p>
+              <div className="modal-actions">
+                {selectedProject.github && (
+                  <a 
+                    href={selectedProject.github} 
+                    target="_blank" 
+                  >
+                    Ver Projeto
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>

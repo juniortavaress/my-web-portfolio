@@ -201,6 +201,49 @@
   margin-top: 20px;
 }
 
+.modal-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 25px; 
+}
+
+.minimal-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a366ff; 
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.minimal-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #a366ff;
+  transition: width 0.3s ease;
+}
+
+.minimal-link:hover {
+  color: #fff;
+}
+
+.minimal-link:hover::after {
+  width: 100%;
+  background-color: #fff;
+}
+
+.minimal-link i {
+  font-size: 1.1rem;
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
