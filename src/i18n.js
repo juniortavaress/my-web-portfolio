@@ -28,6 +28,11 @@ const resources = {
       "status": "SOON",
 
       "project_list": {
+        "acoustic_analysis_gui": {
+          "title": "Acoustic Analysis Interface",
+          "short": "Open-source Python GUI for time, frequency, and psychoacoustic audio analysis.",
+          "full": "An open-source graphical interface developed in Python alongside Ricardo Brum and Jucélio Tavares Junior for sound quality analysis. It allows importing, editing, and analyzing audio in the time and frequency domains, as well as through psychoacoustic metrics calculated with the MosQIto framework from Eomys Engineering. The project is under constant evolution, and contributors are very welcome."
+        },
         "calibration": {
           "title": "Material Model Calibrator",
           "short": "Distributed system for inverse material calibration via FEA (Abaqus).",
@@ -47,6 +52,11 @@ const resources = {
         "title": "Personal Finance & Investment Manager",
         "short": "Full-stack Flask application for tracking transactions and investment portfolios.",
         "full": "A robust financial system designed to manage bank transactions and investment portfolios in one place. \n\nKey features include automated processing of brokerage notes, and a responsive dashboard. It overcomes hosting limitations by offering a modular architecture that supports real-time API integration for asset pricing. Developed to streamline personal wealth management through data automation."
+      },
+        "personal_trainer_vini": {
+          "title": "Vinicius Anselmo Personal Trainer",
+          "short": "Premium landing page focused on fitness services, conversion, and visual impact.",
+          "full": "A modern institutional website built for Vinicius Anselmo to present personal trainer and online coaching services. The project combines responsive design, animations, and a conversion-oriented structure with sections for services, workflow, FAQ, and contact channels."
       },
       },
       
@@ -87,6 +97,11 @@ const resources = {
       "status": "EM BREVE",
 
       "project_list": {
+        "acoustic_analysis_gui": {
+          "title": "Interface de Análise Sonora",
+          "short": "Interface open-source em Python para análise de áudio no tempo, frequência e métricas psicoacústicas.",
+          "full": "Uma interface gráfica open-source desenvolvida em Python em conjunto com Henrique Alende e Ricardo Brum para análises de qualidade sonora. Nela, é possível importar, editar e analisar áudios no domínio do tempo, da frequência e por meio de métricas psicoacústicas calculadas com o framework MosQIto, da Eomys Engineering. O projeto está em constante evolução, e quem tiver interesse em contribuir será muito bem-vindo."
+        },
         "calibration": {
           "title": "Calibrador de Modelos de Materiais",
           "short": "Sistema distribuído para calibração inversa de materiais via FEA (Abaqus).",
@@ -106,6 +121,11 @@ const resources = {
         "title": "Gestor de Finanças e Investimentos",
         "short": "Aplicação Full-stack em Flask para controle de transações e carteira de ativos.",
         "full": "Um sistema robusto de gestão financeira projetado para acompanhar transações bancárias e carteiras de investimento em um só lugar. \n\nAs principais funcionalidades incluem processamento automatizado de notas de corretagem via Pandas e um dashboard responsivo. O projeto demonstra habilidades em CRUD, integração de bancos de dados relacionais e manipulação de dados financeiros complexos para gerar insights de rentabilidade."
+      },
+        "personal_trainer_vini": {
+        "title": "Vinicius Anselmo Personal Trainer",
+        "short": "Landing page premium com foco em serviços fitness, conversão e impacto visual.",
+        "full": "Site institucional moderno criado para apresentar os serviços de personal trainer e consultoria online do Vinicius Anselmo. O projeto combina design responsivo, animações e uma estrutura orientada à conversão com seções de serviços, processo de trabalho, FAQ e canais de contato."
       },
       },
 

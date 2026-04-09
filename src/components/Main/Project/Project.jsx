@@ -44,7 +44,7 @@ const Projects = ({ t }) => {
                   <img 
                     src={proj.image} 
                     alt={t(`project_list.${proj.key}.title`)} 
-                    className="project-img"
+                    className="project-img project-card-img"
                   />
                 ) : (
                   <span>{t('status')}</span>
@@ -69,11 +69,11 @@ const Projects = ({ t }) => {
             <button className="close-modal" onClick={() => setSelectedProject(null)}>&times;</button>
             
             <div className="modal-image">
-                {selectedProject.image ? (
+                {selectedProject.expandedImage ? (
                   <img 
-                    src={selectedProject.image} 
+                    src={selectedProject.expandedImage} 
                     alt={t(`project_list.${selectedProject.key}.title`)} 
-                    className="project-img"
+                    className="project-img project-modal-img"
                   />
                 ) : (
                   <span>{t('status')}</span>
