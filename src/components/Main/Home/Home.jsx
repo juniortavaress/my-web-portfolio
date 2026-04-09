@@ -14,15 +14,15 @@ const Home = ({ t }) => {
 
             <div className="tech-group">
                 <div className="tech-icons">
-                    <i className="devicon-python-plain" title="Python"></i>
-                    <i className="devicon-flask-original" title="Flask"></i>
-                    <i className="devicon-sqlite-plain" title="SQLite"></i>
-                    <i className="devicon-react-original" title="React"></i>
-                    <i className="devicon-javascript-plain" title="JavaScript"></i>
-                    <i className="devicon-html5-plain" title="HTML5"></i>
-                    <i className="devicon-css3-plain" title="CSS3"></i>
-                    <i className="devicon-tailwindcss-original" title="Tailwind"></i>
-                    <i className="devicon-git-plain" title="Git"></i>
+                    <div className="tech-icon-hitbox" title="Python"><i className="devicon-python-plain"></i></div>
+                    <div className="tech-icon-hitbox" title="Flask"><i className="devicon-flask-original"></i></div>
+                    <div className="tech-icon-hitbox" title="SQLite"><i className="devicon-sqlite-plain"></i></div>
+                    <div className="tech-icon-hitbox" title="React"><i className="devicon-react-original"></i></div>
+                    <div className="tech-icon-hitbox" title="JavaScript"><i className="devicon-javascript-plain"></i></div>
+                    <div className="tech-icon-hitbox" title="HTML5"><i className="devicon-html5-plain"></i></div>
+                    <div className="tech-icon-hitbox" title="CSS3"><i className="devicon-css3-plain"></i></div>
+                    <div className="tech-icon-hitbox" title="Tailwind"><i className="devicon-tailwindcss-original"></i></div>
+                    <div className="tech-icon-hitbox" title="Git"><i className="devicon-git-plain"></i></div>
                 </div>
             </div>
         </div>

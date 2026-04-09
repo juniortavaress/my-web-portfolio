@@ -14,16 +14,6 @@ import mockupMMCAExp from '../../../assets/mockup_mmca_exp.png';
 export const projects = [
   {
     id: 6,
-    category: 'software',
-    key: 'acoustic_analysis_gui',
-    tools: ['Python', 'MosQIto', 'Audio Analysis', 'Psychoacoustics'],
-    color: '#3b82f6',
-    image: mockupPsycobox,
-    expandedImage: mockupPsycoboxExp, 
-    github: 'https://github.com/henriquealende/PsychoBox',
-  },
-  {
-    id: 5,
     category: 'web',
     key: 'personal_trainer_vini',
     tools: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'i18next'],
@@ -33,7 +23,7 @@ export const projects = [
     github: 'https://personal-trainer-vinicius-anselmo.vercel.app/',
   },
   {
-    id: 4,
+    id: 5,
     category: 'web', 
     key: 'finance_manager',
     tools: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
@@ -43,7 +33,7 @@ export const projects = [
     github: 'https://github.com/juniortavaress/finance-manager-flask-project',
   },
   {
-    id: 3,
+    id: 4,
     category: 'software',
     key: 'calibration', 
     tools: ['Python', 'Abaqus API', 'Supabase', 'PSO Algorithm', 'Distributed Computing'],
@@ -51,6 +41,16 @@ export const projects = [
     image: mockupMMCA,
     expandedImage: mockupMMCAExp,
     github: 'https://github.com/juniortavaress/material-model-calibration',
+  },
+  {
+    id: 3,
+    category: 'software',
+    key: 'acoustic_analysis_gui',
+    tools: ['Python', 'MosQIto', 'Audio Analysis', 'Psychoacoustics'],
+    color: '#3b82f6',
+    image: mockupPsycobox,
+    expandedImage: mockupPsycoboxExp, 
+    github: 'https://github.com/henriquealende/PsychoBox',
   },
   {
     id: 2,
