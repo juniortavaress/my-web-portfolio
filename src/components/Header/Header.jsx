@@ -27,12 +27,11 @@ const Header = ({ t, i18n, toggleLanguage }) => {
 
       <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#home" onClick={() => setIsMenuOpen(false)}>{t('nav_home')}</a></li>
           <li><a href="#about" onClick={() => setIsMenuOpen(false)}>{t('nav_about')}</a></li>
           <li><a href="#services" onClick={() => setIsMenuOpen(false)}>{t('nav_services')}</a></li>
           <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>{t('nav_projects')}</a></li>
           <li><a href="#contact" className="nav-cta" onClick={() => setIsMenuOpen(false)}>{t('nav_contact')}</a></li>
-          <li>
+          <li className="lang-item">
             <button className="lang-button" onClick={toggleLanguage}>
               {i18n.language === 'pt' ? 'EN' : 'PT'}
             </button>

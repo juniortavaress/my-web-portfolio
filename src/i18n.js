@@ -12,7 +12,7 @@ const resources = {
       "nav_about": "About",
       "nav_services": "How I help",
       "nav_projects": "Projects",
-      "nav_contact": "Contact",
+      "nav_contact": "Let's talk",
 
       "hero_wave": "👋 Hi, I'm Junior",
       "hero_title_pre": "I turn your ideas into",
@@ -130,7 +130,7 @@ const resources = {
       "nav_about": "Sobre",
       "nav_services": "Como ajudo",
       "nav_projects": "Projetos",
-      "nav_contact": "Contato",
+      "nav_contact": "Vamos conversar",
 
       "hero_wave": "👋 Olá, eu sou o Junior",
       "hero_title_pre": "Transformo suas ideias em",

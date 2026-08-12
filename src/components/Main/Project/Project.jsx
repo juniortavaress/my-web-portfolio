@@ -12,6 +12,12 @@ const Projects = ({ t }) => {
   const total = projects.length;
   const activeIndex = Math.min(total, Math.max(1, Math.round(progress * (total - 1)) + 1));
 
+  const getTrackWidth = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return 0;
+    return Math.max(track.scrollWidth - window.innerWidth, 0);
+  }, []);
+
   const updateTrack = useCallback(() => {
     const wrap = wrapRef.current;
     const track = trackRef.current;
@@ -21,35 +27,35 @@ const Projects = ({ t }) => {
     let p = totalScroll > 0 ? -wrap.getBoundingClientRect().top / totalScroll : 0;
     p = Math.max(0, Math.min(1, p));
 
-    const trackWidth = track.scrollWidth - window.innerWidth + 56;
-    track.style.transform = `translateX(-${p * Math.max(trackWidth, 0)}px)`;
+    const trackWidth = getTrackWidth();
+    track.style.transform = `translateX(-${p * trackWidth}px)`;
     setProgress(p);
-  }, []);
-
-  const updateWrapHeight = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    const trackWidth = track.scrollWidth - window.innerWidth + 56;
-    setWrapHeight(window.innerHeight + Math.max(trackWidth, 0));
-  }, []);
+  }, [getTrackWidth]);
 
   useEffect(() => {
-    updateWrapHeight();
-    const onResize = () => updateWrapHeight();
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [updateWrapHeight]);
+    const recalc = () => {
+      setWrapHeight(window.innerHeight + getTrackWidth());
+      updateTrack();
+    };
+    recalc();
+
+    window.addEventListener('resize', recalc);
+
+    const track = trackRef.current;
+    const iframes = track ? track.querySelectorAll('iframe, img') : [];
+    iframes.forEach(el => el.addEventListener('load', recalc));
+
+    return () => {
+      window.removeEventListener('resize', recalc);
+      iframes.forEach(el => el.removeEventListener('load', recalc));
+    };
+  }, [getTrackWidth, updateTrack]);
 
   useEffect(() => {
     const onScroll = () => requestAnimationFrame(updateTrack);
     window.addEventListener('scroll', onScroll);
-    window.addEventListener('resize', onScroll);
-    updateTrack();
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
-    };
-  }, [updateTrack, wrapHeight]);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [updateTrack]);
 
   useEffect(() => {
     document.documentElement.style.overflow = selectedProject ? 'hidden' : 'unset';

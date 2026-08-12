@@ -53,8 +53,8 @@
   padding: 0;
 }
 
-.nav-menu ul li:last-child {
-  margin-left: 4px;
+.lang-item {
+  display: none;
 }
 
 .nav-menu a {
