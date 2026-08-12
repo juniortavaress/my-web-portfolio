@@ -4,38 +4,32 @@ import './Contact.css';
 const Contact = ({ t }) => {
 
   return (
-    <section id="contact" className="full-section">
-      <div className="contact-container">
-        <h2>{t('contact.title')}</h2>
-      
-        <div className="contact-grid">
-          <form action="https://formspree.io/f/xwvnvodn" method="POST" className="contact-form desktop-only">
-            <input type="text" name="name" placeholder={t('contact.form_name')} required />
-            <input type="email" name="email" placeholder={t('contact.form_email')} required />
-            <textarea name="message" placeholder={t('contact.form_message')} rows="5" required></textarea>
-            <button type="submit" className="btn-send">{t('contact.send_button')}</button>
-          </form>
+    <section id="contact" className="contact">
+      <div className="contact-blob"></div>
+      <span className="eyebrow">{t('contact.eyebrow')}</span>
+      <h2>{t('contact.title')}</h2>
+      <p>{t('contact.description')}</p>
 
-          <div className="contact-info">
-            <h3>{t('contact.subtitle')}</h3>
-            <p>{t('contact.description')}</p>
-        
-            <div className="social-icons">
-              <a href="https://wa.me/5548998430552" target="_blank" rel="noopener noreferrer" className="social-card">
-                <FaWhatsapp /> <span>WhatsApp</span>
-              </a>
-              <a href="https://www.linkedin.com/in/jucelio-junior" target="_blank" rel="noopener noreferrer" className="social-card">
-                <FaLinkedin /> <span>LinkedIn</span>
-              </a>
-              <a href="mailto:juceliojunior27@gmail.com" className="social-card">
-                <FaEnvelope /> <span>Email</span>
-              </a>
-              <a href="https://github.com/juniortavaress" target="_blank" rel="noopener noreferrer" className="social-card">
-                <FaGithub /> <span>GitHub</span>
-              </a>
-            </div>
-          </div>
-        </div>
+      <form action="https://formspree.io/f/xwvnvodn" method="POST" className="contact-form">
+        <input type="text" name="name" placeholder={t('contact.form_name')} required />
+        <input type="email" name="email" placeholder={t('contact.form_email')} required />
+        <textarea name="message" placeholder={t('contact.form_message')} rows="4" required></textarea>
+        <button type="submit" className="btn btn-primary">{t('contact.send_button')}</button>
+      </form>
+
+      <div className="contact-links">
+        <a href="https://wa.me/5548998430552" target="_blank" rel="noopener noreferrer">
+          <FaWhatsapp /> WhatsApp
+        </a>
+        <a href="https://www.linkedin.com/in/jucelio-junior" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin /> LinkedIn
+        </a>
+        <a href="mailto:juceliojunior27@gmail.com">
+          <FaEnvelope /> Email
+        </a>
+        <a href="https://github.com/juniortavaress" target="_blank" rel="noopener noreferrer">
+          <FaGithub /> GitHub
+        </a>
       </div>
     </section>
   );

@@ -93,9 +93,10 @@ const resources = {
       },
       
       "contact": {
-        "title": "Contact",
+        "eyebrow": "Let's talk",
+        "title": "Have an idea or a problem to solve?",
         "subtitle": "Let's work together!",
-        "description": "I'm currently available for new projects. Feel free to reach out via social media or the form below.",
+        "description": "Tell me what you need — no strings attached. I reply quickly and will tell you exactly how I can help.",
         "form_name": "Name",
         "form_email": "Email",
         "form_message": "Message",
@@ -193,9 +194,10 @@ const resources = {
       },
 
       "contact": {
-        "title": "Contatos",
+        "eyebrow": "Vamos conversar",
+        "title": "Tem uma ideia ou um problema para resolver?",
         "subtitle": "Vamos trabalhar juntos!",
-        "description": "Estou disponível para novos projetos. Sinta-se à vontade para me chamar nas redes ou enviar uma mensagem.",
+        "description": "Me conta o que você precisa — sem compromisso. Eu respondo rápido e te digo exatamente como posso ajudar.",
         "form_name": "Nome",
         "form_email": "E-mail",
         "form_message": "Mensagem",
