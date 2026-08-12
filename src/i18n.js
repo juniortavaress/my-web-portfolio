@@ -10,6 +10,7 @@ const resources = {
       "i_build": "I develop modern applications, combining robust back-ends with dynamic interfaces.",
       "nav_home": "Home",
       "nav_about": "About",
+      "nav_services": "How I help",
       "nav_projects": "Projects",
       "nav_contact": "Contact",
 
@@ -34,6 +35,24 @@ const resources = {
       "about_web": "Web Development",
       "about_desktop": "Software Development ",
       "about_eng": "Engenharia & Data",
+
+      "services_eyebrow": "How I can help",
+      "services_title": "Custom solutions for your problem",
+      "services_desc": "I don't just deliver code — I deliver a solution built for what you actually need.",
+      "services_list": {
+        "web": {
+          "title": "Websites & web systems",
+          "desc": "From an institutional website to a full system with login, database, and control panel — so you can manage your business without relying on loose spreadsheets."
+        },
+        "automation": {
+          "title": "Task automation",
+          "desc": "That repetitive process eating up your day? I automate it with scripts that do the work for you, with far less room for error."
+        },
+        "apps": {
+          "title": "Custom applications",
+          "desc": "Software built for your business's specific needs — inventory control, customer records, reports, and much more."
+        }
+      },
 
       "projects_eyebrow": "Projects",
       "projects_title": "A bit of what I've already built",
@@ -97,10 +116,8 @@ const resources = {
         "title": "Have an idea or a problem to solve?",
         "subtitle": "Let's work together!",
         "description": "Tell me what you need — no strings attached. I reply quickly and will tell you exactly how I can help.",
-        "form_name": "Name",
-        "form_email": "Email",
-        "form_message": "Message",
-        "send_button": "Send Message"
+        "send_button": "Send a message",
+        "whatsapp_button": "Chat on WhatsApp"
       }
     }
   },
@@ -111,6 +128,7 @@ const resources = {
       "i_build": "Desenvolvo aplicações modernas, unindo back-ends robustos à interfaces dinâmicas.",
       "nav_home": "Início",
       "nav_about": "Sobre",
+      "nav_services": "Como ajudo",
       "nav_projects": "Projetos",
       "nav_contact": "Contato",
 
@@ -135,6 +153,24 @@ const resources = {
       "about_web": "Desenvolvimento Web",
       "about_desktop": "Desenvolvimento de Software",
       "about_eng": "Engenharia & Dados",
+
+      "services_eyebrow": "Como posso ajudar",
+      "services_title": "Soluções sob medida para o seu problema",
+      "services_desc": "Não entrego só código — entrego uma solução pensada para o que você realmente precisa.",
+      "services_list": {
+        "web": {
+          "title": "Sites e sistemas web",
+          "desc": "Do site institucional ao sistema completo com login, banco de dados e painel de controle — para você gerenciar seu negócio sem depender de planilhas soltas."
+        },
+        "automation": {
+          "title": "Automação de tarefas",
+          "desc": "Aquele processo repetitivo que toma horas do seu dia? Eu automatizo com scripts que fazem o trabalho por você, com muito menos chance de erro."
+        },
+        "apps": {
+          "title": "Aplicativos sob medida",
+          "desc": "Programas de computador feitos para a necessidade específica do seu negócio — controle de estoque, cadastro de clientes, relatórios e muito mais."
+        }
+      },
 
       "projects_eyebrow": "Projetos",
       "projects_title": "Um pouco do que já construí",
@@ -198,10 +234,9 @@ const resources = {
         "title": "Tem uma ideia ou um problema para resolver?",
         "subtitle": "Vamos trabalhar juntos!",
         "description": "Me conta o que você precisa — sem compromisso. Eu respondo rápido e te digo exatamente como posso ajudar.",
-        "form_name": "Nome",
-        "form_email": "E-mail",
-        "form_message": "Mensagem",
-        "send_button": "Enviar Mensagem", },
+        "send_button": "Enviar mensagem",
+        "whatsapp_button": "Chamar no WhatsApp"
+      },
 
 
      

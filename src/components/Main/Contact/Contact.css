@@ -44,62 +44,43 @@
   position: relative;
 }
 
-.contact-form {
-  max-width: 480px;
-  margin: 0 auto 40px;
+.contact-cta {
   display: flex;
-  flex-direction: column;
   gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
   position: relative;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid rgba(255, 255, 255, .25);
-  background: rgba(255, 255, 255, .08);
-  color: #fff;
-  outline: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, .65);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #fff;
-}
-
-.contact-form .btn-primary {
+.contact .btn-primary {
   background: #fff;
   color: var(--accent-dark);
-  align-self: center;
-  margin-top: 4px;
 }
 
-.contact-form .btn-primary:hover {
+.contact .btn-primary:hover {
   background: var(--gold);
   color: #fff;
+}
+
+.contact .btn-ghost {
+  border-color: rgba(255, 255, 255, .35);
+  color: #fff;
+}
+
+.contact .btn-ghost:hover {
+  border-color: #fff;
 }
 
 .contact-links {
   display: flex;
   gap: 28px;
   justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 44px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .contact-links a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   color: rgba(255, 255, 255, .85);
   text-decoration: none;
   font-size: 14.5px;

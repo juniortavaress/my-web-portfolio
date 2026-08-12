@@ -9,8 +9,6 @@
   gap: 60px;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   text-align: left;
   animation: fadeInUp 1.2s ease forwards;
 }

@@ -1,17 +1,21 @@
-import { useState } from 'react';
-import logoImg from '../../assets/logo.png';
+import { useState, useEffect } from 'react';
 import './Header.css';
 
 const Header = ({ t, i18n, toggleLanguage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <a href="#home">
-          <img src={logoImg} alt="Logo Jucelio" style={{ height: '56px' }} />
-        </a>
+        <a href="#home">Junior Tavares<span className="dot">.</span></a>
       </div>
 
       {/* Only Mobile */}
@@ -25,24 +29,16 @@ const Header = ({ t, i18n, toggleLanguage }) => {
         <ul>
           <li><a href="#home" onClick={() => setIsMenuOpen(false)}>{t('nav_home')}</a></li>
           <li><a href="#about" onClick={() => setIsMenuOpen(false)}>{t('nav_about')}</a></li>
+          <li><a href="#services" onClick={() => setIsMenuOpen(false)}>{t('nav_services')}</a></li>
           <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>{t('nav_projects')}</a></li>
-          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>{t('nav_contact')}</a></li>
-          
-          {/* Only Mobile */}
-          <li className="mobile-only">
+          <li><a href="#contact" className="nav-cta" onClick={() => setIsMenuOpen(false)}>{t('nav_contact')}</a></li>
+          <li>
             <button className="lang-button" onClick={toggleLanguage}>
               {i18n.language === 'pt' ? 'EN' : 'PT'}
             </button>
           </li>
         </ul>
       </nav>
-
-      {/* Only Desktop */}
-      <div className="header-actions desktop-only">
-        <button className="lang-button" onClick={toggleLanguage}>
-          {i18n.language === 'pt' ? 'EN' : 'PT'}
-        </button>
-      </div>
     </header>
   );
 };

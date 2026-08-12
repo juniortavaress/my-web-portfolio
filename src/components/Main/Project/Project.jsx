@@ -5,6 +5,7 @@ import './Projects.css';
 const Projects = ({ t }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [wrapHeight, setWrapHeight] = useState(0);
   const wrapRef = useRef(null);
   const trackRef = useRef(null);
 
@@ -25,6 +26,20 @@ const Projects = ({ t }) => {
     setProgress(p);
   }, []);
 
+  const updateWrapHeight = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const trackWidth = track.scrollWidth - window.innerWidth + 56;
+    setWrapHeight(window.innerHeight + Math.max(trackWidth, 0));
+  }, []);
+
+  useEffect(() => {
+    updateWrapHeight();
+    const onResize = () => updateWrapHeight();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [updateWrapHeight]);
+
   useEffect(() => {
     const onScroll = () => requestAnimationFrame(updateTrack);
     window.addEventListener('scroll', onScroll);
@@ -34,7 +49,7 @@ const Projects = ({ t }) => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
     };
-  }, [updateTrack]);
+  }, [updateTrack, wrapHeight]);
 
   useEffect(() => {
     document.documentElement.style.overflow = selectedProject ? 'hidden' : 'unset';
@@ -44,7 +59,7 @@ const Projects = ({ t }) => {
   }, [selectedProject]);
 
   return (
-    <section id="projects" className="projects-pin-wrap" ref={wrapRef} style={{ height: `${total * 100}vh` }}>
+    <section id="projects" className="projects-pin-wrap" ref={wrapRef} style={{ height: wrapHeight ? `${wrapHeight}px` : '100vh' }}>
       <div className="projects-sticky">
         <div className="projects-header">
           <div>
