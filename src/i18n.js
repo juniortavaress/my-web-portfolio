@@ -35,7 +35,8 @@ const resources = {
       "about_desktop": "Software Development ",
       "about_eng": "Engenharia & Data",
 
-      "projects_title": "My Projects",
+      "projects_eyebrow": "Projects",
+      "projects_title": "A bit of what I've already built",
       "filter_all": "All",
       "filter_web": "Web Development",
       "filter_software": "Software Development",
@@ -44,6 +45,21 @@ const resources = {
       "status": "SOON",
 
       "project_list": {
+        "vertical_life": {
+          "title": "Vertical Life 8",
+          "short": "Website for a vertical rescue techniques school in Florianópolis, Brazil.",
+          "full": "Website for a vertical techniques school in Florianópolis, offering mountain rescue courses, first-aid training (APH), and canine rescue training."
+        },
+        "atmos_finance": {
+          "title": "Atmos — Finance Manager",
+          "short": "Presentation site for Atmos, a tool to organize and track personal finances.",
+          "full": "Presentation website for Atmos, a tool designed to organize and track personal finances in a simple, visual way."
+        },
+        "solo_arena": {
+          "title": "SOLO Padel & Sand Arena",
+          "short": "Landing page for a sports arena with padel courts and sand sports.",
+          "full": "Landing page for a sports arena featuring padel courts and sand sports, presenting the venue's structure and making it easy to get in touch for bookings."
+        },
         "acoustic_analysis_gui": {
           "title": "Acoustic Analysis Interface",
           "short": "Open-source Python GUI for time, frequency, and psychoacoustic audio analysis.",
@@ -119,7 +135,8 @@ const resources = {
       "about_desktop": "Desenvolvimento de Software",
       "about_eng": "Engenharia & Dados",
 
-      "projects_title": "Meus Projetos",
+      "projects_eyebrow": "Projetos",
+      "projects_title": "Um pouco do que já construí",
       "filter_all": "Todos",
       "filter_web": "Desevolvimento Web",
       "filter_software": "Desenvolvmento de Software",
@@ -128,6 +145,21 @@ const resources = {
       "status": "EM BREVE",
 
       "project_list": {
+        "vertical_life": {
+          "title": "Vertical Life 8",
+          "short": "Site para uma escola de técnicas verticais em Florianópolis.",
+          "full": "Site para uma escola de técnicas verticais em Florianópolis, com cursos de resgate em montanha, APH e treinamento com cães."
+        },
+        "atmos_finance": {
+          "title": "Atmos — Gestão Financeira",
+          "short": "Site de apresentação do Atmos, uma ferramenta para organizar as finanças pessoais.",
+          "full": "Site de apresentação do Atmos, uma ferramenta para organizar e acompanhar as finanças pessoais de forma simples e visual."
+        },
+        "solo_arena": {
+          "title": "SOLO Arena de Padel & Areia",
+          "short": "Landing page para uma arena esportiva com quadras de padel e esportes de areia.",
+          "full": "Landing page para uma arena esportiva com quadras de padel e esportes de areia, apresentando a estrutura do local e facilitando o contato para reservas."
+        },
         "acoustic_analysis_gui": {
           "title": "Interface de Análise Sonora",
           "short": "Interface open-source em Python para análise de áudio no tempo, frequência e métricas psicoacústicas.",
