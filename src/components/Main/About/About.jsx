@@ -1,42 +1,25 @@
-import React from 'react';
+import { Trans } from 'react-i18next';
 import './About.css';
+
+const STACK = ['Python', 'Flask', 'React', 'JavaScript', 'PySide6', 'SQLite', 'Git'];
 
 const About = ({ t }) => {
   return (
-    <section id="about" className="full-section about-container">
-      <div className="about-content">
-        <h2 className="section-title">{t('about_title')}</h2>
-        
-        <div className="about-grid">
-          {/* Lado Esquerdo: Texto Narrativo */}
-          <div className="about-text">
-            <p>{t('about_p1')}</p>
-            <p>{t('about_p2')}</p>
-            
-            <div className="skills-tags">
-              <span>#Python</span>
-              <span>#Flask</span>
-              <span>#React</span>
-              <span>#JavaScript</span>
-              <span>#PySide6</span>
-              <span>#SQLite</span>
-              <span>#Git</span>
-            </div>
-          </div>
+    <section id="about" className="section about">
+      <div className="about-grid">
+        <div className="about-photo">{t('about_photo_placeholder')}</div>
+        <div>
+          <span className="eyebrow">{t('about_eyebrow')}</span>
+          <h2 className="about-heading">{t('about_title')}</h2>
+          <p><Trans t={t} i18nKey="about_p1" components={{ strong: <strong /> }} /></p>
+          <p><Trans t={t} i18nKey="about_p2" components={{ strong: <strong /> }} /></p>
+          <p>{t('about_p3')}</p>
 
-          <div className="about-cards">
-            <div className="skill-card">
-              <i className="devicon-chrome-plain"></i>
-              <span>{t('about_web')}</span>
-            </div>
-            <div className="skill-card">
-              <i className="devicon-python-plain"></i>
-              <span>{t('about_desktop')}</span>
-            </div>
-            <div className="skill-card">
-              <i className="devicon-googlecloud-plain"></i> 
-              <span>{t('about_eng')}</span>
-            </div>
+          <div className="about-stack-line">
+            <span className="about-stack-label">{t('about_stack_label')}</span>
+            {STACK.map(tech => (
+              <span key={tech} className="stack-pill">{tech}</span>
+            ))}
           </div>
         </div>
       </div>

@@ -7,13 +7,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 6vw;
   z-index: 1000;
   box-sizing: border-box;
-  background: rgba(13, 17, 23, 0.6); 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(247, 245, 238, .85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: .3s;
 }
 
 .logo {
@@ -29,40 +30,24 @@
 
 .nav-menu ul {
   display: flex;
+  align-items: center;
   list-style: none;
-  gap: 40px; 
+  gap: 36px;
   margin: 0;
   padding: 0;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.7); 
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
   position: relative;
 }
 
-.nav-menu a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -5px;
-  left: 0;
-  background-color: #8833ff; 
-  transition: width 0.3s ease;
-}
-
 .nav-menu a:hover {
-  color: #ffffff;
-}
-
-.nav-menu a:hover::after {
-  width: 100%;
+  color: var(--accent);
 }
 
 .header-actions {
@@ -72,31 +57,30 @@
 
 .lang-button {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2); 
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px; /* Estilo pílula */
-  font-size: 0.75rem;
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  letter-spacing: 1.5px;
-  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
   outline: none;
 }
 
 .lang-button:hover {
-  background: white;
-  color: #0d1117;
-  border-color: white;
-  transform: translateY(-1px);
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
 }
 
 .lang-button:active {
-  transform: translateY(0);
+  transform: translateY(1px);
 }
 
 .mobile-only {
-  display: none; 
+  display: none;
 }
 
 .desktop-only {
@@ -115,19 +99,19 @@
 }
 
 .menu-toggle .bar {
-  width: 30px;
+  width: 26px;
   height: 2px;
-  background-color: white;
+  background-color: var(--ink);
   transition: 0.4s;
 }
 
 @media (max-width: 768px) {
-  .desktop-only { 
-    display: none !important; 
+  .desktop-only {
+    display: none !important;
   }
 
-  .mobile-only { 
-    display: block !important; 
+  .mobile-only {
+    display: block !important;
   }
 
   .menu-toggle {
@@ -140,7 +124,7 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: rgba(13, 17, 23, 0.98); 
+    background: rgba(247, 245, 238, .98);
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
@@ -160,18 +144,18 @@
   }
 
   .nav-menu a {
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-size: 1.6rem;
+    font-weight: 500;
   }
 
   .nav-menu .lang-button {
     margin-top: 20px;
     padding: 12px 30px;
     font-size: 1rem;
-    border: 1px solid #8833ff;
-    color: #8833ff;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
     background: transparent;
-    display: inline-block; 
+    display: inline-block;
   }
 
   .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }

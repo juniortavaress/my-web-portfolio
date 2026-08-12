@@ -10,7 +10,7 @@ const Header = ({ t, i18n, toggleLanguage }) => {
     <header className="header">
       <div className="logo">
         <a href="#home">
-          <img src={logoImg} alt="Logo Jucelio" style={{ height: '80px' }} />
+          <img src={logoImg} alt="Logo Jucelio" style={{ height: '56px' }} />
         </a>
       </div>
 
