@@ -27,7 +27,6 @@ button, input, select, textarea {
   width: 100%;
   min-height: 100vh;
   background-color: transparent;
-  overflow-y: auto;
   z-index: 1;
 }
 
