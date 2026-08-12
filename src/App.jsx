@@ -1,4 +1,3 @@
-import ParticleBackground from "./components/Background/ParticleBackground";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Main/Home/Home";
@@ -18,8 +17,6 @@ const App = () => {
 
   return (
     <div id="main-div">
-      
-      <ParticleBackground />
       <Header t={t} i18n={i18n} toggleLanguage={toggleLanguage} />
 
       <main className="content-wrapper">
