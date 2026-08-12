@@ -33,21 +33,27 @@ const Projects = ({ t }) => {
   }, [getTrackWidth]);
 
   useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
     const recalc = () => {
       setWrapHeight(window.innerHeight + getTrackWidth());
       updateTrack();
     };
-    recalc();
 
+    const resizeObserver = new ResizeObserver(recalc);
+    resizeObserver.observe(track);
     window.addEventListener('resize', recalc);
 
-    const track = trackRef.current;
-    const iframes = track ? track.querySelectorAll('iframe, img') : [];
-    iframes.forEach(el => el.addEventListener('load', recalc));
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(recalc);
+    }
+
+    recalc();
 
     return () => {
+      resizeObserver.disconnect();
       window.removeEventListener('resize', recalc);
-      iframes.forEach(el => el.removeEventListener('load', recalc));
     };
   }, [getTrackWidth, updateTrack]);
 
