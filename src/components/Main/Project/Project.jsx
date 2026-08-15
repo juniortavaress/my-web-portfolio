@@ -5,18 +5,11 @@ import './Projects.css';
 const Projects = ({ t }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [progress, setProgress] = useState(0);
-  const [wrapHeight, setWrapHeight] = useState(0);
   const wrapRef = useRef(null);
   const trackRef = useRef(null);
 
   const total = projects.length;
   const activeIndex = Math.min(total, Math.max(1, Math.round(progress * (total - 1)) + 1));
-
-  const getTrackWidth = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return 0;
-    return Math.max(track.scrollWidth - window.innerWidth, 0);
-  }, []);
 
   const updateTrack = useCallback(() => {
     const wrap = wrapRef.current;
@@ -27,40 +20,20 @@ const Projects = ({ t }) => {
     let p = totalScroll > 0 ? -wrap.getBoundingClientRect().top / totalScroll : 0;
     p = Math.max(0, Math.min(1, p));
 
-    const trackWidth = getTrackWidth();
-    track.style.transform = `translateX(-${p * trackWidth}px)`;
+    const trackWidth = track.scrollWidth - window.innerWidth + 56;
+    track.style.transform = `translateX(-${p * Math.max(trackWidth, 0)}px)`;
     setProgress(p);
-  }, [getTrackWidth]);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const recalc = () => {
-      setWrapHeight(window.innerHeight + getTrackWidth());
-      updateTrack();
-    };
-
-    const resizeObserver = new ResizeObserver(recalc);
-    resizeObserver.observe(track);
-    window.addEventListener('resize', recalc);
-
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(recalc);
-    }
-
-    recalc();
-
-    return () => {
-      resizeObserver.disconnect();
-      window.removeEventListener('resize', recalc);
-    };
-  }, [getTrackWidth, updateTrack]);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => requestAnimationFrame(updateTrack);
     window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    updateTrack();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, [updateTrack]);
 
   useEffect(() => {
@@ -71,7 +44,7 @@ const Projects = ({ t }) => {
   }, [selectedProject]);
 
   return (
-    <section id="projects" className="projects-pin-wrap" ref={wrapRef} style={{ height: wrapHeight ? `${wrapHeight}px` : '100vh' }}>
+    <section id="projects" className="projects-pin-wrap" ref={wrapRef} style={{ height: `${total * 100}vh` }}>
       <div className="projects-sticky">
         <div className="projects-header">
           <div>
