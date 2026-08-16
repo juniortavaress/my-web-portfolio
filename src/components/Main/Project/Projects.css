@@ -1,10 +1,5 @@
-.projects-pin-wrap {
+.projects-section {
   position: relative;
-}
-
-.projects-sticky {
-  position: sticky;
-  top: 0;
   height: 100vh;
   overflow: hidden;
   display: flex;
