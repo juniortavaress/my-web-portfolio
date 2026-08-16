@@ -12,9 +12,12 @@ html{
   scroll-margin-top: 90px;
 }
 
-#services,
-#contact {
+#services {
   scroll-margin-top: -20px;
+}
+
+#contact {
+  scroll-margin-top: 90px;
 }
 
 body, html, #root {

@@ -233,7 +233,7 @@ const resources = {
         "eyebrow": "Vamos conversar",
         "title": "Tem uma ideia ou um problema para resolver?",
         "subtitle": "Vamos trabalhar juntos!",
-        "description": "Me conta o que você precisa — sem compromisso. Eu respondo rápido e te digo exatamente como posso ajudar.",
+        "description": "Me conta o que você precisa — sem compromisso. Eu respondo e te digo exatamente como posso ajudar.",
         "send_button": "Enviar mensagem",
         "whatsapp_button": "Chamar no WhatsApp"
       },
