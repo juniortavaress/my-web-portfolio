@@ -136,7 +136,7 @@ const resources = {
       "hero_title_pre": "Transformo suas ideias em",
       "hero_title_highlight": "sistemas e sites",
       "hero_title_post": "que funcionam de verdade.",
-      "hero_desc": "Sou formado em Engenharia e desenvolvo soluções digitais sob medida — de sites simples a sistemas completos — para pessoas e pequenos negócios que precisam de algo funcional, bonito e feito com cuidado.",
+      "hero_desc": "Desenvolvo soluções digitais sob medida, de sites simples a sistemas completos, para pessoas e negócios que precisam de algo funcional, bonito e feito com cuidado.",
       "hero_cta_primary": "Solicitar orçamento",
       "hero_cta_ghost": "Ver meu trabalho",
       "hero_badge": "Disponível para novos projetos",
@@ -146,10 +146,10 @@ const resources = {
       "about_eyebrow": "Sobre mim",
       "about_photo_placeholder": "Foto ou ilustração sua aqui",
       "about_title": "Da engenharia para a tecnologia, sempre resolvendo problemas",
-      "about_p1": "Sou <strong>formado em Engenharia Mecânica</strong> e, ao longo da faculdade, descobri no código uma forma ainda mais direta de resolver problemas reais — de pessoas e de negócios.",
-      "about_p2": "Hoje me dedico a criar <strong>sites, sistemas e aplicativos sob medida</strong>, sempre com a mesma mentalidade que trouxe da engenharia: entender o problema a fundo antes de propor a solução, e entregar algo que realmente funcione no seu dia a dia.",
+      "about_p1": "Sou <strong>estudante de Engenharia Mecânica</strong> e, ao longo da faculdade, descobri no código uma forma ainda mais direta de resolver problemas reais — de pessoas e de negócios.",
+      "about_p2": "Hoje me dedico a usar a programação para resolver problemas reais seja por meio de <strong>sites, sistemas, aplicativos sob medida ou automatizações</strong>, sempre com a mesma mentalidade que trouxe da engenharia: entender o problema a fundo antes de propor a solução, e entregar algo que realmente funcione no seu dia a dia.",
       "about_p3": "Se você tem uma ideia, um processo manual que consome tempo, ou precisa de um site para mostrar seu trabalho — eu posso te ajudar a tirar isso do papel.",
-      "about_stack_label": "Trabalho principalmente com",
+      "about_stack_label": "",
       "about_web": "Desenvolvimento Web",
       "about_desktop": "Desenvolvimento de Software",
       "about_eng": "Engenharia & Dados",
@@ -160,7 +160,7 @@ const resources = {
       "services_list": {
         "web": {
           "title": "Sites e sistemas web",
-          "desc": "Do site institucional ao sistema completo com login, banco de dados e painel de controle — para você gerenciar seu negócio sem depender de planilhas soltas."
+          "desc": "Do site institucional ao sistema completo com login, banco de dados e painel de controle, para você gerenciar seu negócio sem depender de planilhas soltas."
         },
         "automation": {
           "title": "Automação de tarefas",
@@ -168,7 +168,7 @@ const resources = {
         },
         "apps": {
           "title": "Aplicativos sob medida",
-          "desc": "Programas de computador feitos para a necessidade específica do seu negócio — controle de estoque, cadastro de clientes, relatórios e muito mais."
+          "desc": "Programas de computador feitos para a necessidade específica do seu negócio, controle de estoque, cadastro de clientes, relatórios e muito mais."
         }
       },
 

@@ -20,7 +20,7 @@ const Projects = ({ t }) => {
     let p = totalScroll > 0 ? -wrap.getBoundingClientRect().top / totalScroll : 0;
     p = Math.max(0, Math.min(1, p));
 
-    const trackWidth = track.scrollWidth - window.innerWidth + 56;
+    const trackWidth = track.scrollWidth - window.innerWidth;
     track.style.transform = `translateX(-${p * Math.max(trackWidth, 0)}px)`;
     setProgress(p);
   }, []);

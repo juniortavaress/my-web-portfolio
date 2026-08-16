@@ -8,6 +8,15 @@ html{
   scroll-behavior: smooth;
 }
 
+#about {
+  scroll-margin-top: 90px;
+}
+
+#services,
+#contact {
+  scroll-margin-top: -20px;
+}
+
 body, html, #root {
   margin: 0;
   padding: 0;
@@ -15,7 +24,6 @@ body, html, #root {
   -webkit-font-smoothing: antialiased;
   width: 100%;
   background-color: var(--bg);
-  overflow-x: hidden
 }
 
 button, input, select, textarea {
