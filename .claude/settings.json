@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"d:/Projetos Pessoais/my-web-portfolio\" log --oneline -10 -- src/components/Main/Project/)",
+      "Bash(git -C \"d:/Projetos Pessoais/my-web-portfolio\" diff HEAD~4 HEAD -- src/components/Main/Project/)",
+      "Bash(git -C \"d:/Projetos Pessoais/my-web-portfolio\" diff -- src/components/Main/Project/Project.jsx src/components/Main/Project/Projects.css)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(node \"C:\\\\Users\\\\Jucel\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Projetos-Pessoais-my-web-portfolio\\\\c67e3614-27ef-4d28-b280-f881d37a0cb0\\\\scratchpad\\\\test_scroll_pin.cjs\")",
+      "Bash(cp \"C:\\\\Users\\\\Jucel\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Projetos-Pessoais-my-web-portfolio\\\\c67e3614-27ef-4d28-b280-f881d37a0cb0\\\\scratchpad\\\\test_scroll_pin.cjs\" \"d:/Projetos Pessoais/my-web-portfolio/_scroll_test.cjs\")",
+      "Bash(node _scroll_test.cjs)",
+      "Bash(node -e ' *)",
+      "Bash(cd \"d:/Projetos Pessoais/my-web-portfolio\" && rm -f _scroll_test.cjs scroll_step_*.png && git status --short)",
+      "Bash(lsof -ti:5183 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(rm -f about_after.png)",
+      "Bash(lsof -ti:5184 -sTCP:LISTEN)",
+      "Bash(rm -f about_after2.png)",
+      "Bash(lsof -ti:5185 -sTCP:LISTEN)"
+    ],
+    "additionalDirectories": [
+      "D:\\Projetos Pessoais\\my-web-portfolio"
+    ]
+  }
+}

@@ -6,51 +6,51 @@ const resources = {
     en: {
     translation: {
       "hi_my_name_is": "Hi, I'm",
-      "role": "Full-Stack Developer",
+      "role": "Engineer & Developer",
       "i_build": "I develop modern applications, combining robust back-ends with dynamic interfaces.",
       "nav_home": "Home",
       "nav_about": "About",
       "nav_services": "How I help",
       "nav_projects": "Projects",
-      "nav_contact": "Let's talk",
+      "nav_contact": "Contact",
 
       "hero_wave": "👋 Hi, I'm Junior",
-      "hero_title_pre": "I turn your ideas into",
+      "hero_title_pre": "I build",
       "hero_title_highlight": "systems and websites",
       "hero_title_post": "that actually work.",
-      "hero_desc": "I have a degree in Engineering and build custom digital solutions — from simple websites to full systems — for people and small businesses that need something functional, beautiful, and made with care.",
-      "hero_cta_primary": "Request a quote",
+      "hero_desc": "I have a background in Engineering and an analytical approach to problem solving. I build digital solutions end-to-end — from front-end interfaces to back-end systems and automation — with a strong focus on writing code that is functional, clean, and reliable.",
+      "hero_cta_primary": "Get in touch",
       "hero_cta_ghost": "See my work",
-      "hero_badge": "Available for new projects",
+      "hero_badge": "Open to new opportunities",
       "hero_trust_value": "5+",
       "hero_trust_label": "years coding",
 
       "about_eyebrow": "About me",
       "about_photo_placeholder": "Your photo or illustration here",
       "about_title": "From engineering to technology, always solving problems",
-      "about_p1": "I hold a degree in <strong>Mechanical Engineering</strong>, and throughout college I discovered in code an even more direct way to solve real problems — for people and for businesses.",
-      "about_p2": "Today I focus on building <strong>custom websites, systems, and applications</strong>, always with the same mindset I brought from engineering: understanding the problem deeply before proposing a solution, and delivering something that truly works in your day-to-day.",
-      "about_p3": "If you have an idea, a manual process that wastes your time, or need a website to showcase your work — I can help you bring it to life.",
+      "about_p1": "I hold a degree in <strong>Mechanical Engineering</strong>, which trained me to break down complex problems into data, variables, and testable hypotheses before jumping to a solution.",
+      "about_p2": "Today I apply that same analytical mindset to <strong>software, automation, and data</strong> — mapping a process, finding where it breaks down or wastes time, and building the tool that fixes it.",
+      "about_p3": "I enjoy the full cycle: understanding a problem, modeling it, and shipping something that actually works — and I'm always looking for the next one to work on.",
       "about_stack_label": "I mainly work with",
       "about_web": "Web Development",
       "about_desktop": "Software Development ",
       "about_eng": "Engenharia & Data",
 
-      "services_eyebrow": "How I can help",
-      "services_title": "Custom solutions for your problem",
-      "services_desc": "I don't just deliver code — I deliver a solution built for what you actually need.",
+      "services_eyebrow": "What I do",
+      "services_title": "Where I focus my work",
+      "services_desc": "I approach every problem analytically first — then build the tool that solves it.",
       "services_list": {
         "web": {
           "title": "Websites & web systems",
-          "desc": "From an institutional website to a full system with login, database, and control panel — so you can manage your business without relying on loose spreadsheets."
+          "desc": "From institutional websites to full systems with authentication, databases, and admin panels."
         },
         "automation": {
-          "title": "Task automation",
-          "desc": "That repetitive process eating up your day? I automate it with scripts that do the work for you, with far less room for error."
+          "title": "Process automation & data analysis",
+          "desc": "I map repetitive or manual processes and replace them with scripts and pipelines that cut time and error, turning raw data into something decision-ready."
         },
         "apps": {
-          "title": "Custom applications",
-          "desc": "Software built for your business's specific needs — inventory control, customer records, reports, and much more."
+          "title": "Custom software & tools",
+          "desc": "Applications built around a specific operational need — inventory control, reporting, monitoring, and more."
         }
       },
 
@@ -67,17 +67,17 @@ const resources = {
         "vertical_life": {
           "title": "Vertical Life 8",
           "short": "Website for a vertical rescue techniques school in Florianópolis, Brazil.",
-          "full": "Website for a vertical techniques school in Florianópolis, offering mountain rescue courses, first-aid training (APH), and canine rescue training."
+          "full": "Institutional website for a vertical techniques school in Florianópolis. It brings together the courses offered — mountain rescue, first-aid training (APH), and canine rescue — in a clear structure focused on building credibility and converting visitors into students."
         },
         "atmos_finance": {
           "title": "Atmos — Finance Manager",
           "short": "Presentation site for Atmos, a tool to organize and track personal finances.",
-          "full": "Presentation website for Atmos, a tool designed to organize and track personal finances in a simple, visual way."
+          "full": "Presentation website for Atmos, a product for organizing and tracking personal finances. The layout leans on charts and in-app mockups to explain the value proposition fast, without relying on long copy."
         },
         "solo_arena": {
           "title": "SOLO Padel & Sand Arena",
           "short": "Landing page for a sports arena with padel courts and sand sports.",
-          "full": "Landing page for a sports arena featuring padel courts and sand sports, presenting the venue's structure and making it easy to get in touch for bookings."
+          "full": "Conceptual landing page for a fictional sports arena with padel courts and sand sports. Features opening hours, a booking button, and location."
         },
         "acoustic_analysis_gui": {
           "title": "Acoustic Analysis Interface",
@@ -107,15 +107,15 @@ const resources = {
         "personal_trainer_vini": {
           "title": "Vinicius Anselmo Personal Trainer",
           "short": "Premium landing page focused on fitness services, conversion, and visual impact.",
-          "full": "A modern institutional website built for Vinicius Anselmo to present personal trainer and online coaching services. The project combines responsive design, animations, and a conversion-oriented structure with sections for services, workflow, FAQ, and contact channels."
+          "full": "Institutional website presenting Vinicius Anselmo's personal trainer and online coaching services. Features sections for services, workflow, FAQ, and contact channels, with responsive design and animations."
       },
       },
       
       "contact": {
-        "eyebrow": "Let's talk",
-        "title": "Have an idea or a problem to solve?",
-        "subtitle": "Let's work together!",
-        "description": "Tell me what you need — no strings attached. I reply quickly and will tell you exactly how I can help.",
+        "eyebrow": "Contact",
+        "title": "Let's talk?",
+        "subtitle": "I'm open to new opportunities.",
+        "description": "Feel free to reach out — I'm happy to talk about a role, a project, or just exchange ideas.",
         "send_button": "Send a message",
         "whatsapp_button": "Chat on WhatsApp"
       }
@@ -124,51 +124,51 @@ const resources = {
     pt: {
     translation: {
       "hi_my_name_is": "Olá, me chamo",
-      "role": "Desenvolvedor Full-Stack",
+      "role": "Engenheiro & Desenvolvedor",
       "i_build": "Desenvolvo aplicações modernas, unindo back-ends robustos à interfaces dinâmicas.",
       "nav_home": "Início",
       "nav_about": "Sobre",
       "nav_services": "Como ajudo",
       "nav_projects": "Projetos",
-      "nav_contact": "Vamos conversar",
+      "nav_contact": "Contato",
 
       "hero_wave": "👋 Olá, eu sou o Junior",
-      "hero_title_pre": "Transformo suas ideias em",
+      "hero_title_pre": "Eu construo",
       "hero_title_highlight": "sistemas e sites",
       "hero_title_post": "que funcionam de verdade.",
-      "hero_desc": "Desenvolvo soluções digitais sob medida, de sites simples a sistemas completos, para pessoas e negócios que precisam de algo funcional, bonito e feito com cuidado.",
-      "hero_cta_primary": "Solicitar orçamento",
+      "hero_desc": "Sou formado em Engenharia e desenvolvo soluções digitais de ponta a ponta — de interfaces front-end a sistemas back-end — com foco em escrever código funcional, limpo e confiável.",
+      "hero_cta_primary": "Entrar em contato",
       "hero_cta_ghost": "Ver meu trabalho",
-      "hero_badge": "Disponível para novos projetos",
+      "hero_badge": "Aberto a novas oportunidades",
       "hero_trust_value": "5+",
       "hero_trust_label": "anos programando",
 
       "about_eyebrow": "Sobre mim",
       "about_photo_placeholder": "Foto ou ilustração sua aqui",
       "about_title": "Da engenharia para a tecnologia, sempre resolvendo problemas",
-      "about_p1": "Sou <strong>estudante de Engenharia Mecânica</strong> e, ao longo da faculdade, descobri no código uma forma ainda mais direta de resolver problemas reais — de pessoas e de negócios.",
-      "about_p2": "Hoje me dedico a usar a programação para resolver problemas reais seja por meio de <strong>sites, sistemas, aplicativos sob medida ou automatizações</strong>, sempre com a mesma mentalidade que trouxe da engenharia: entender o problema a fundo antes de propor a solução, e entregar algo que realmente funcione no seu dia a dia.",
-      "about_p3": "Se você tem uma ideia, um processo manual que consome tempo, ou precisa de um site para mostrar seu trabalho — eu posso te ajudar a tirar isso do papel.",
+      "about_p1": "Sou <strong>estudante de Engenharia Mecânica</strong> e, ao longo da faculdade, descobri no código uma forma ainda mais direta de resolver problemas reais.",
+      "about_p2": "Hoje me dedico a construir <strong>sites, sistemas e aplicativos</strong>, sempre com a mesma mentalidade que trouxe da engenharia: entender o problema a fundo antes de propor a solução, e entregar algo que realmente funcione.",
+      "about_p3": "Gosto de tirar um projeto do zero até algo funcional e bem construído — e estou sempre em busca do próximo desafio.",
       "about_stack_label": "",
       "about_web": "Desenvolvimento Web",
       "about_desktop": "Desenvolvimento de Software",
       "about_eng": "Engenharia & Dados",
 
-      "services_eyebrow": "Como posso ajudar",
-      "services_title": "Soluções sob medida para o seu problema",
-      "services_desc": "Não entrego só código — entrego uma solução pensada para o que você realmente precisa.",
+      "services_eyebrow": "O que eu faço",
+      "services_title": "Onde concentro meu trabalho",
+      "services_desc": "Não entrego só código — construo soluções pensadas para o problema real.",
       "services_list": {
         "web": {
           "title": "Sites e sistemas web",
-          "desc": "Do site institucional ao sistema completo com login, banco de dados e painel de controle, para você gerenciar seu negócio sem depender de planilhas soltas."
+          "desc": "De sites institucionais a sistemas completos com autenticação, banco de dados e painel administrativo."
         },
         "automation": {
           "title": "Automação de tarefas",
-          "desc": "Aquele processo repetitivo que toma horas do seu dia? Eu automatizo com scripts que fazem o trabalho por você, com muito menos chance de erro."
+          "desc": "Scripts e ferramentas que substituem trabalho manual repetitivo, reduzindo tempo e chance de erro."
         },
         "apps": {
           "title": "Aplicativos sob medida",
-          "desc": "Programas de computador feitos para a necessidade específica do seu negócio, controle de estoque, cadastro de clientes, relatórios e muito mais."
+          "desc": "Software construído para necessidades específicas — controle de estoque, cadastro de clientes, relatórios e mais."
         }
       },
 
@@ -185,17 +185,17 @@ const resources = {
         "vertical_life": {
           "title": "Vertical Life 8",
           "short": "Site para uma escola de técnicas verticais em Florianópolis.",
-          "full": "Site para uma escola de técnicas verticais em Florianópolis, com cursos de resgate em montanha, APH e treinamento com cães."
+          "full": "Projeto de um site institucional para uma escola de técnicas verticais em Florianópolis. Reúne os cursos oferecidos bem como apresentação da equipe e dos apoiadores."
         },
         "atmos_finance": {
           "title": "Atmos — Gestão Financeira",
           "short": "Site de apresentação do Atmos, uma ferramenta para organizar as finanças pessoais.",
-          "full": "Site de apresentação do Atmos, uma ferramenta para organizar e acompanhar as finanças pessoais de forma simples e visual."
+          "full": "Site para gestão financeira pessoal, com módulos de 'amigos' para divisão de conta e módulo de investimento, com atualização automática. Foi um projeto para uso pessoal."
         },
         "solo_arena": {
           "title": "SOLO Arena de Padel & Areia",
           "short": "Landing page para uma arena esportiva com quadras de padel e esportes de areia.",
-          "full": "Landing page para uma arena esportiva com quadras de padel e esportes de areia, apresentando a estrutura do local e facilitando o contato para reservas."
+          "full": "Projeto conceitual de landing page para uma arena esportiva fictícia, com quadras de padel e esportes de areia. Traz horário de funcionamento, botão de reserva e localização."
         },
         "acoustic_analysis_gui": {
           "title": "Interface de Análise Sonora",
@@ -220,20 +220,20 @@ const resources = {
         "finance_manager": {
         "title": "Gestor de Finanças e Investimentos",
         "short": "Aplicação Full-stack em Flask para controle de transações e carteira de ativos.",
-        "full": "Um sistema robusto de gestão financeira projetado para acompanhar transações bancárias e carteiras de investimento em um só lugar. \n\nAs principais funcionalidades incluem processamento automatizado de notas de corretagem via Pandas e um dashboard responsivo. O projeto demonstra habilidades em CRUD, integração de bancos de dados relacionais e manipulação de dados financeiros complexos para gerar insights de rentabilidade."
+        "full": "Primeiro sistema de gestão financeira projetado por mim para acompanhar transações bancárias e carteiras de investimento em um só lugar. \n\nAs principais funcionalidades incluem processamento automatizado de notas de corretagem via Pandas e um dashboard responsivo."
       },
         "personal_trainer_vini": {
         "title": "Vinicius Anselmo Personal Trainer",
         "short": "Landing page premium com foco em serviços fitness, conversão e impacto visual.",
-        "full": "Site institucional moderno criado para apresentar os serviços de personal trainer e consultoria online do Vinicius Anselmo. O projeto combina design responsivo, animações e uma estrutura orientada à conversão com seções de serviços, processo de trabalho, FAQ e canais de contato."
+        "full": "Site institucional para apresentar os serviços de personal trainer e consultoria online do Vinicius Anselmo. Traz seções de serviços, processo de trabalho, FAQ e canais de contato, com design responsivo e animações."
       },
       },
 
       "contact": {
-        "eyebrow": "Vamos conversar",
-        "title": "Tem uma ideia ou um problema para resolver?",
-        "subtitle": "Vamos trabalhar juntos!",
-        "description": "Me conta o que você precisa — sem compromisso. Eu respondo e te digo exatamente como posso ajudar.",
+        "eyebrow": "Contato",
+        "title": "Vamos conversar?",
+        "subtitle": "Estou aberto a novas oportunidades.",
+        "description": "Fique à vontade para entrar em contato — posso falar sobre uma vaga, um projeto ou só trocar uma ideia.",
         "send_button": "Enviar mensagem",
         "whatsapp_button": "Chamar no WhatsApp"
       },
