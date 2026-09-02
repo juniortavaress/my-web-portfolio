@@ -160,7 +160,7 @@ const resources = {
       "hero_trust_value": "5+",
       "hero_trust_label": "anos programando",
 
-      "about_eyebrow": "Sobre mim",
+      "about_eyebrow": "Sobre mim ",
       "about_photo_placeholder": "Foto ou ilustração sua aqui",
       "about_title": "Jucélio Tavares Junior",
       "about_p1": "Acho que a engenharia só confirmou uma coisa que eu já era antes dela. Desde os 18 anos invisto e acompanho meus próprios números todo mês, sempre gostei dessa lógica de olhar para um dado, entender o que ele está dizendo e tomar uma decisão em cima disso.",
