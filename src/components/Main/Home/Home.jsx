@@ -12,14 +12,14 @@ const Home = ({ t }) => {
           <p className="hero-desc">{t('hero_desc')}</p>
 
           <div className="hero-cta">
-            <a href="#contact" className="btn btn-primary">{t('hero_cta_primary')}</a>
+            <a href="#about" className="btn btn-primary">{t('hero_cta_primary')}</a>
             <a href="#projects" className="btn btn-ghost">{t('hero_cta_ghost')}</a>
           </div>
 
           <div className="hero-trust">
             <div>
-              <strong>{t('hero_trust_value')}</strong>
-              <span>{t('hero_trust_label')}</span>
+              {/* <strong>{t('hero_trust_value')}</strong>
+              <span>{t('hero_trust_label')}</span> */}
             </div>
           </div>
         </div>

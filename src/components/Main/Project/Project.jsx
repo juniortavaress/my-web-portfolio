@@ -7,6 +7,7 @@ const FRAME_HEIGHT = 900;
 
 const ScaledFrame = ({ src, title, interactive = false }) => {
   const containerRef = useRef(null);
+  const iframeRef = useRef(null);
   const [scale, setScale] = useState(0.2);
 
   useEffect(() => {
@@ -23,13 +24,35 @@ const ScaledFrame = ({ src, title, interactive = false }) => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (interactive) return;
+
+    // Páginas carregadas dentro do iframe (ex: um campo de login com
+    // autofoco) podem chamar .focus() no próprio conteúdo. O navegador então
+    // move o foco da janela para o iframe e rola a página até ele ficar
+    // visível — mesmo sendo só um thumbnail decorativo dentro do carrossel.
+    // Como o conteúdo é de outra origem, não dá pra prevenir o .focus() em
+    // si; guardamos a posição de scroll de antes e a restauramos assim que
+    // ele sai da página.
+    const handleBlur = () => {
+      if (document.activeElement !== iframeRef.current) return;
+      const { scrollX, scrollY } = window;
+      requestAnimationFrame(() => window.scrollTo(scrollX, scrollY));
+    };
+
+    window.addEventListener('blur', handleBlur);
+    return () => window.removeEventListener('blur', handleBlur);
+  }, [interactive]);
+
   return (
     <div ref={containerRef} className="scaled-frame">
       <iframe
+        ref={iframeRef}
         src={src}
         loading="lazy"
         scrolling={interactive ? 'yes' : 'no'}
         title={title}
+        tabIndex={interactive ? undefined : -1}
         style={{
           width: FRAME_WIDTH,
           height: FRAME_HEIGHT,

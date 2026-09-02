@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Main/Home/Home";
@@ -8,9 +9,16 @@ import Project from "./components/Main/Project/Project";
 import { useTranslation } from 'react-i18next';
 import "./App.css"
 
-
 const App = () => {
   const { t, i18n } = useTranslation();
+
+  useLayoutEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   const toggleLanguage = () => {
     const newLang = i18n.language === 'pt' ? 'en' : 'pt';
     i18n.changeLanguage(newLang);

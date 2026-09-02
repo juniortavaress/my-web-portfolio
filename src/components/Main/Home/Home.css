@@ -70,6 +70,7 @@
 
 .btn-primary:hover {
   background: var(--accent-dark);
+  color: #fff;
   transform: translateY(-2px);
 }
 
